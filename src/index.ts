@@ -8,7 +8,7 @@ export default function vitePluginYalcWatch(options: packageNames): Plugin {
     name: 'vite-plugin-yalc-watch',
     async configureServer(server) {
       if(options && options.length) {
-        const yalcPackages = options.map(name => path.resolve(__dirname, 'node_modules', name, 'package.json'))
+        const yalcPackages = options.map(name => path.resolve(process.cwd(), 'node_modules', name, 'package.json'))
         watch(yalcPackages, { ignoreInitial: true }).on('all', async event => {
           if (event === 'change' || event === 'add') {
             await server.restart(true)
