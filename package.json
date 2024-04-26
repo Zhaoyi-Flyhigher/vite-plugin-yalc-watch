@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-yalc-watch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "监听 yalc add 之后包的变化，自动重启 vite dev server",
   "type": "module",
   "exports": {
