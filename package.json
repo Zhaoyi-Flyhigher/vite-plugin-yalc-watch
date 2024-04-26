@@ -1,0 +1,41 @@
+{
+  "name": "vite-plugin-yalc-watch",
+  "version": "0.0.0",
+  "description": "监听 yalc add 之后包的变化，自动重启 vite dev server",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/Zhaoyi-Flyhigher/vite-plugin-yalc-watch",
+  "author": "zhaoyi <banbaoyan_zy@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "unbuild",
+    "prepublish": "npm run build",
+    "release": "bumpp && npm publish"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "yalc"
+  ],
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "vite": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "bumpp": "^9.4.0",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0"
+  }
+}
